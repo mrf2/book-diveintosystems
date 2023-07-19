@@ -27,7 +27,7 @@ int main()
 	 * individually pass each field to printf.
 	 */
 
-	printf("name: %s age: %d gpa: %f, year: %d\n",
+	printf("name: %s age: %d gpa: %g, year: %d\n",
 			student1.name, student1.age, student1.gpa, student1.grad_yr);
 
 	/* Copy all the field values of student1 into student2. */
@@ -38,7 +38,7 @@ int main()
 	student2.grad_yr = student1.grad_yr + 1;
 
 	/* Print the fields of student2. */
-	printf("name: %s age: %d gpa: %f, year: %d\n",
+	printf("name: %s age: %d gpa: %g, year: %d\n",
 			student2.name, student2.age, student2.gpa, student2.grad_yr);
 
 	/* Print the size of the struct studentT type. */
