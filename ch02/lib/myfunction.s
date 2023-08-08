@@ -14,7 +14,8 @@ myfunc:				# the start of the function
 	#
 	# the return value should be stored in $eax before returning
 
-	mov $32, %eax	
+	# mov $32, %eax	
+	mov 8(%ebp), %eax
 	leave			# function return code
 	ret
  

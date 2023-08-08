@@ -7,10 +7,10 @@ int main()
 {
 	int ret;
 
-	ret = myfunc(32);
-	// ret = myfunc2(32);
+	ret = myfunc(50);
+	// ret = myfunc2(50);
 
-	printf("myfunc(32) is %d\n", ret);
+	printf("myfunc(50) is %d\n", ret);
 
 	return 0;
 }
