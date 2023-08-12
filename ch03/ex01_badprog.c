@@ -11,7 +11,7 @@
  *	returns: 0 on success and non-zero on an error
  */
 
-int findAndReturnMax(int *array1, int len, int max)
+int findAndReturnMax(int *array1, int len, int *max)
 {
 	int i;
 
@@ -19,10 +19,10 @@ int findAndReturnMax(int *array1, int len, int max)
 		return -1;
 	}
 
-	max = array1[0];
+	*max = array1[0];
 	for (int i = 1; i <= len; i++) {
-		if (max < array1[i])
-			max = array1[i];
+		if (*max < array1[i])
+			*max = array1[i];
 	}
 
 	return 0;
@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 
 	int max = arr[0];
 
-	if (findAndReturnMax(arr, 5, max) != 0) {
+	if (findAndReturnMax(arr, 4, &max) != 0) {
 		printf("strange error\n");
 		exit(1);
 	}
