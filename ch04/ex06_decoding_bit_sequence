@@ -1,0 +1,21 @@
+We know that: (-1)^n * 2^(e-127) * 1.s
+Given Sequence: 11000001101101000000000000000000
+
+d31 = 1 (The sign Bit)
+d30-d23 = 1000 0011 [ Exponent Bits (e) ]
+d22-d00 = 0110100 00000000 00000000 [ Significand Bits (s) ]
+        = 2^(-2) + 2^(-3) + 2^(-5)
+	= 0.25 + 0.125 + 0.03125
+--------------------------------
+	  0.25000
+	 +0.12500
+	 +0.03125
+----------------------------------
+        = 0.40625
+
+So, The significand region contributes 1.40625
+The exponent is: 0b1000 0011 = 0d131, so the exponent contributes a factor
+	of 2^(131-127) = 2^4 = 16
+The sign bit is 1, so the sequence represents a negative value.
+Now, putting it all together, the bit sequence represents:
+1.40625 * 16 * -1 = 22.5
